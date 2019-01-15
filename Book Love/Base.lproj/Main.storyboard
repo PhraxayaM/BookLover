@@ -1,24 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BkZ-2d-UVZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Book_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Lover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZA-eS-VrG">
+                                <rect key="frame" x="91" y="85" width="193" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="EcD-fB-cD7">
+                                <rect key="frame" x="109" y="188" width="157" height="345"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO7-dq-Wz1">
+                                        <rect key="frame" x="19" y="0.0" width="119" height="30"/>
+                                        <state key="normal" title="Browse randomly"/>
+                                        <connections>
+                                            <segue destination="Evc-FG-CfL" kind="show" id="UBk-Tl-3mg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYO-a3-6kU">
+                                        <rect key="frame" x="20" y="105" width="117" height="30"/>
+                                        <state key="normal" title="Browse by Genre"/>
+                                        <connections>
+                                            <segue destination="0Fm-bs-3fO" kind="show" id="Wzy-iF-Zjg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-RO-YH2">
+                                        <rect key="frame" x="6" y="210" width="145" height="30"/>
+                                        <state key="normal" title="Browse by most liked"/>
+                                        <connections>
+                                            <segue destination="EHl-wY-WQo" kind="show" id="svu-lz-7ts"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-hV-hVg">
+                                        <rect key="frame" x="25.5" y="315" width="106" height="30"/>
+                                        <state key="normal" title="Your most liked"/>
+                                        <connections>
+                                            <segue destination="xMu-FH-dgm" kind="show" id="NMe-8c-xjR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EcD-fB-cD7" secondAttribute="trailing" constant="109" id="12v-yq-szq"/>
+                            <constraint firstItem="EcD-fB-cD7" firstAttribute="top" secondItem="AZA-eS-VrG" secondAttribute="bottom" constant="60" id="30n-4D-wbW"/>
+                            <constraint firstItem="AZA-eS-VrG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fiG-aL-A74"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EcD-fB-cD7" secondAttribute="bottom" constant="134" id="o7q-dE-Cbh"/>
+                            <constraint firstItem="EcD-fB-cD7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="tTm-55-ehB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" id="XVr-dO-8k1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="212" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H1u-y0-7FX">
+            <objects>
+                <viewController id="Evc-FG-CfL" customClass="ViewController" customModule="Book_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lpt-wt-pKg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book.png" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-fd-fgc">
+                                <rect key="frame" x="50" y="196" width="275" height="275"/>
+                                <accessibility key="accessibilityConfiguration" identifier="bookImageView"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FB9-fd-fgc" secondAttribute="height" multiplier="1:1" id="8Zd-Pi-SRt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3C-Br-abm">
+                                <rect key="frame" x="67" y="561" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The Road is a 2006 novel by American writer Cormac McCarthy. It is a post-apocalyptic tale of a journey taken by a father and his young son over a period of several months, across a landscape blasted by an unnamed cataclysm that destroyed all civilization and, apparently, most life on earth. The novel was awarded the 2007 Pulitzer Prize for Fiction and the James Tait Black Memorial Prize for Fiction in 2006.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lOc-yQ-3gF" firstAttribute="trailing" secondItem="FB9-fd-fgc" secondAttribute="trailing" constant="50" id="4at-cp-eR3"/>
+                            <constraint firstItem="FB9-fd-fgc" firstAttribute="centerX" secondItem="Lpt-wt-pKg" secondAttribute="centerX" id="X7H-Od-aKA"/>
+                            <constraint firstItem="FB9-fd-fgc" firstAttribute="centerY" secondItem="Lpt-wt-pKg" secondAttribute="centerY" id="dC3-1b-R1d"/>
+                            <constraint firstItem="FB9-fd-fgc" firstAttribute="leading" secondItem="lOc-yQ-3gF" secondAttribute="leading" constant="50" id="vIp-Ra-opy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lOc-yQ-3gF"/>
+                    </view>
+                    <connections>
+                        <outlet property="bookImageView" destination="FB9-fd-fgc" id="N2D-nk-FkL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4z-5u-Jux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="haS-Oz-HuH">
+            <objects>
+                <viewController id="xMu-FH-dgm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EOz-Jc-5Bs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Outliers.png" translatesAutoresizingMaskIntoConstraints="NO" id="rEn-i2-4cG">
+                                <rect key="frame" x="67" y="219" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olt-nW-abg">
+                                <rect key="frame" x="67" y="511" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">In this book, the author takes a contrarian view about how people attain high levels of success. He contends that certainly, although skills, knowledge and a lot of hard work are required, success is also greatly influenced by one's "ecology". Essentially, that we must look beyond individual merit, to areas such as one's friends and family, what a person's parents did for a living, one's upbringing, community, even birthplace and cultural legacies.
+
+That "it is only by asking where they are from" that we can unravel the logic behind who succeeds and who doesn't. Gladwell studied the path to success for a variety of people and groups, from the Beatles to Bill Gates to Mozart and Andrew Carnegie, to understand their success drivers. His opinion as to what truly distinguishes them and their achievements was "not their extraordinary talent, but their extraordinary opportunities."
+
+Outliers are these people who all had help along the way, were given a special opportunity and they seized it. But success is not about lucky breaks; it's recognizing and seizing on one's opportunities. In addressing the impact of intelligence on success, Gladwell writes that "the relationship between success and IQ works only up to a point", and then intellect and achievement are far from perfectly correlated. Assuming at least an average IQ, for higher levels of success, something termed "practical intelligence" is necessary, including knowing what to say to whom, knowing when to say it, and knowing how to say it for maximum effect (none of which can accurately be gauged by one's IQ level).
+
+Gladwell states that "Success is not a random act. It arises out of a predictable and powerful set of circumstances and opportunities." And also that often it's not so much about ability as it is about attitude and motivation. Finally, he adds that success is a function of persistence and the willingness to work hard at something when most people are giving up. So it seems that Gladwell's formula for success would be: The Right Ecology + Practical Intelligence + Extraordinary Opportunities + Skills &amp; Knowledge + Hard Work &amp; Persistence.
+
+The more novel elements of this formula being the importance of ecology and the ability to seize upon one's opportunities.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Bg2-tP-FC9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZh-Zd-80b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="812"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pD2-K1-gyE">
+            <objects>
+                <viewController id="Hiy-df-AwU" customClass="ViewController" customModule="Book_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eS-qD-7lT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOg-0N-gEr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="13c-yF-XJn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13c-yF-XJn" id="Wee-hO-taa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ULM-Qk-gKP" firstAttribute="trailing" secondItem="eOg-0N-gEr" secondAttribute="trailing" id="1iM-mL-2Gq"/>
+                            <constraint firstItem="eOg-0N-gEr" firstAttribute="leading" secondItem="ULM-Qk-gKP" secondAttribute="leading" id="Cah-zl-kMu"/>
+                            <constraint firstItem="eOg-0N-gEr" firstAttribute="top" secondItem="ULM-Qk-gKP" secondAttribute="top" id="UWj-VC-vHX"/>
+                            <constraint firstItem="ULM-Qk-gKP" firstAttribute="bottom" secondItem="eOg-0N-gEr" secondAttribute="bottom" id="hG0-30-RTm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ULM-Qk-gKP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7f-Yq-KJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0ON-xG-Wcc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BkZ-2d-UVZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toZ-XD-WX4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O9J-OX-EY7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gp1-17-ZAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727.20000000000005" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wiE-kc-Pgx">
+            <objects>
+                <viewController id="EHl-wY-WQo" customClass="ViewController" customModule="Book_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWv-Qx-8X0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hobbit.png" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-73-MzC">
+                                <rect key="frame" x="67.5" y="64" width="240" height="449"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="449" id="TNe-oJ-yfk"/>
+                                    <constraint firstAttribute="width" constant="240" id="wPm-ys-e8F"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sm-5u-JUU">
+                                <rect key="frame" x="58" y="541" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug. Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f9R-73-MzC" firstAttribute="top" secondItem="qJN-KM-Iz3" secondAttribute="top" id="8WB-5c-a9Z"/>
+                            <constraint firstItem="f9R-73-MzC" firstAttribute="centerX" secondItem="dWv-Qx-8X0" secondAttribute="centerX" id="q22-s9-Tip"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qJN-KM-Iz3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csO-AU-OAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="811.84407796101959"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QF6-RS-KUf">
+            <objects>
+                <viewController id="0Fm-bs-3fO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W80-Fd-2O9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dragon.png" translatesAutoresizingMaskIntoConstraints="NO" id="MXd-mc-jWs">
+                                <rect key="frame" x="67" y="232" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tue-Jb-Ud2">
+                                <rect key="frame" x="56" y="522" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Disgraced financial reporter Mikael Blomkvist (Daniel Craig) finds a chance to redeem his honor after being hired by wealthy Swedish industrialist Henrik Vanger (Christopher Plummer) to solve the 40-year-old murder of Vanger's niece, Harriet. Vanger believes that Harriet was killed by a member of his own family. Eventually joining Blomkvist on his dangerous quest for the truth is Lisbeth Salander (Rooney Mara), an unusual but ingenious investigator whose fragile trust is not easily won.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CBY-kK-dVb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xP-ew-Dj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-674"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Book.png" width="341" height="527"/>
+        <image name="Dragon.png" width="320" height="497"/>
+        <image name="Hobbit.png" width="297" height="449"/>
+        <image name="Outliers.png" width="335" height="504"/>
+    </resources>
 </document>

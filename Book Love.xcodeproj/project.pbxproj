@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492C03E021EDB35200000C01 /* Outliers.png in Resources */ = {isa = PBXBuildFile; fileRef = 492C03DD21EDB35000000C01 /* Outliers.png */; };
+		492C03E121EDB35200000C01 /* Hobbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 492C03DE21EDB35100000C01 /* Hobbit.png */; };
+		492C03E221EDB35200000C01 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 492C03DF21EDB35200000C01 /* Dragon.png */; };
 		4978E47621E67BBF00ED81FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978E47521E67BBF00ED81FA /* AppDelegate.swift */; };
 		4978E47821E67BBF00ED81FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978E47721E67BBF00ED81FA /* ViewController.swift */; };
 		4978E47B21E67BBF00ED81FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4978E47921E67BBF00ED81FA /* Main.storyboard */; };
 		4978E47D21E67BC300ED81FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4978E47C21E67BC300ED81FA /* Assets.xcassets */; };
 		4978E48021E67BC300ED81FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4978E47E21E67BC300ED81FA /* LaunchScreen.storyboard */; };
+		4978E48821E7F00C00ED81FA /* bookData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4978E48721E7F00B00ED81FA /* bookData.json */; };
+		49E119C921E8E83800EC007D /* Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E119C821E8E83700EC007D /* Book.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492C03DD21EDB35000000C01 /* Outliers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Outliers.png; path = Assets.xcassets/Outliers.png; sourceTree = "<group>"; };
+		492C03DE21EDB35100000C01 /* Hobbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hobbit.png; path = Assets.xcassets/Hobbit.png; sourceTree = "<group>"; };
+		492C03DF21EDB35200000C01 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dragon.png; path = Assets.xcassets/Dragon.png; sourceTree = "<group>"; };
 		4978E47221E67BBF00ED81FA /* Book Love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Love.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4978E47521E67BBF00ED81FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4978E47721E67BBF00ED81FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		4978E47C21E67BC300ED81FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4978E47F21E67BC300ED81FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4978E48121E67BC300ED81FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4978E48721E7F00B00ED81FA /* bookData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookData.json; sourceTree = "<group>"; };
+		49E119C821E8E83700EC007D /* Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Book.png; path = Assets.xcassets/Book.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			children = (
 				4978E47521E67BBF00ED81FA /* AppDelegate.swift */,
 				4978E47721E67BBF00ED81FA /* ViewController.swift */,
+				4978E48721E7F00B00ED81FA /* bookData.json */,
 				4978E47921E67BBF00ED81FA /* Main.storyboard */,
+				492C03DE21EDB35100000C01 /* Hobbit.png */,
+				492C03DF21EDB35200000C01 /* Dragon.png */,
+				492C03DD21EDB35000000C01 /* Outliers.png */,
+				49E119C821E8E83700EC007D /* Book.png */,
 				4978E47C21E67BC300ED81FA /* Assets.xcassets */,
 				4978E47E21E67BC300ED81FA /* LaunchScreen.storyboard */,
 				4978E48121E67BC300ED81FA /* Info.plist */,
@@ -122,8 +137,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492C03E121EDB35200000C01 /* Hobbit.png in Resources */,
+				49E119C921E8E83800EC007D /* Book.png in Resources */,
 				4978E48021E67BC300ED81FA /* LaunchScreen.storyboard in Resources */,
 				4978E47D21E67BC300ED81FA /* Assets.xcassets in Resources */,
+				4978E48821E7F00C00ED81FA /* bookData.json in Resources */,
+				492C03E221EDB35200000C01 /* Dragon.png in Resources */,
+				492C03E021EDB35200000C01 /* Outliers.png in Resources */,
 				4978E47B21E67BBF00ED81FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
